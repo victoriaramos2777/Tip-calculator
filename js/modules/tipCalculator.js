@@ -1,5 +1,11 @@
-function suma(num1, num2) {
-  return num1 + num2;
+function tipCalculater(total, porcenTip, Personas) {
+  let propina;
+  propina = (tolat*porcenTip)/Personas;
+
+  //redondea a cifras decimales 
+  propina = propina 
+  return propina;
+
 }
 
-export default suma;
+export default tipCalculater;
