@@ -1,6 +1,6 @@
 function tipCalculater(total, porcenTip, Personas) {
   let propina;
-  propina = (tolat*porcenTip)/Personas;
+  propina = (total*porcenTip)/Personas;
 
   //redondea a cifras decimales 
   propina = propina 
