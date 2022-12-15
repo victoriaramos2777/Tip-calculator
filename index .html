@@ -11,15 +11,18 @@
 
   <!-- Link para iconos de FontAwesome -->
   <script src="https://kit.fontawesome.com/64d25ab310.js" crossorigin="anonymous"></script>
+  <!--link para google fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">">
 
   <!-- Link para mi archivo de CSS -->
-  <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+  <link rel="stylesheet" href="./assets/css/style.css"> 
 </head>
 
 <body>
   <!-- Encabezado -->
+  <div class="global">
   <header id="header" class="header">
-    <h1 class="header__title">Splitter</h1>
+    <h1 class="header__title">Spli<br>tter</h1>
   </header>
 
   <!-- Main Section -->
@@ -27,13 +30,14 @@
     <form id="main-form" class="form">
       <div class="form__box">
         <label class="form__box__label">Bill</label>
-        <div class="form__box__inputs">
+        <div class="form__box__label__inputs">
           <i class="fa-solid fa-dollar-sign"></i>
-          <input type="number" id="total-bill">
+          <input type="number" id="total-bill" class="form__box__label__inputs__input">
         </div>
       </div>
 
       <div class="form__btns" id="form-btns">
+        <label  class="form__box__label">Selector de %</label>
         <button type="button" class="form__btns__button"value="0.05">5%</button>
         <button type="button" class="form__btns__button"value="0.10">10%</button>
         <button type="button" class="form__btns__button"value="0.15">15%</button>
@@ -68,6 +72,7 @@
       <button type="button" class="result__btn">Reset</button>
     </section>
   </main>
+</div>
 
   <!-- Archivo de JavaScript -->
   <script src="./js/main.js" type="module"></script>
