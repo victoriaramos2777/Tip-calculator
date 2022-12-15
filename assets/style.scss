@@ -36,13 +36,15 @@ body{
 
 
 .header{
-    padding: 2em;
+    padding: 1em;
+    
     &__title{
        font: weight 700; 
        text-transform:uppercase;
-       letter-spacing: 10px;
+       letter-spacing: 5px;
        line-height: 1.5em;
        text-align: center;
+       width: 20%;
     }
 }
 
@@ -50,7 +52,7 @@ body{
 #main{
     background-color: var(--White);
     border-radius: 15px;
-    height: 100vh;
+    height:700px;
 }
 .form {
   margin: 30px ; 
@@ -61,6 +63,7 @@ body{
     height:  20%;
     &__label{
        color: var( --Grayish-cyan); 
+       
        &__inputs{
         padding: 3%;
         width:77%;
