@@ -58,16 +58,30 @@ body {
   background-color: var(--Very-light-grayish-cyan);
   display: flex;
   justify-content: space-between;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 .form__box__label__inputs__icon-dollar {
   width: 5%;
 }
-.form__box__label__inputs__icon-dollar__input {
+.form__box__label__inputs input {
   color: var(--Very-dark-cyan);
   border: none;
   background: none;
   outline: none;
   width: 7em;
+}
+.form__box__label__inputs input::-webkit-outer-spin-button,
+.form__box__label__inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__box__label__inputs input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn.active {
+  background-color: var(--Strong-cyan);
 }
 
 /*# sourceMappingURL=style.css.map */
