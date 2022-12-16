@@ -3,6 +3,12 @@
   padding: 0%;
 }
 
+::placeholder {
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
 :root {
   --Strong-cyan: hsl(172, 67%, 45%);
   --Very-dark-cyan: hsl(183, 100%, 15%);
@@ -26,35 +32,40 @@ body {
 }
 
 .header {
-  padding: 1em;
+  width: 100%;
+  height: 20vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .header__logo {
-  width: 20%;
+  width: 17%;
+  height: 30%;
 }
 
 #main {
   background-color: var(--White);
-  border-radius: 15px;
-  height: 100vh;
+  border-radius: 1rem;
 }
 
 .form {
-  padding: 20px;
-  width: 100%;
-  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
 }
 .form__box {
   height: 20%;
 }
 .form__box__label {
-  color: var(--Grayish-cyan);
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 .form__box__label__inputs {
-  padding: 3%;
-  width: 77%;
-  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  height: 2.2rem;
+  border-radius: 0.9rem;
   background-color: var(--Very-light-grayish-cyan);
   display: flex;
   justify-content: space-between;
@@ -69,7 +80,11 @@ body {
   border: none;
   background: none;
   outline: none;
-  width: 7em;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1;
+  width: 50%;
 }
 .form__box__label__inputs input::-webkit-outer-spin-button,
 .form__box__label__inputs input::-webkit-inner-spin-button {
@@ -80,8 +95,32 @@ body {
   -moz-appearance: textfield;
 }
 
-.btn.active {
+.form__btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__btns__button {
+  border: none;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  width: 40%;
+  margin-top: 3%;
+  padding: 1%;
+  outline: none;
+  transition: 0.3s;
+}
+.form__btns__button:nth-child(odd) {
+  margin-right: 6%;
+}
+.form__btns__button.active {
   background-color: var(--Strong-cyan);
+}
+.form__btns input {
+  background-color: var(--Very-light-grayish-cyan);
 }
 
 /*# sourceMappingURL=style.css.map */
