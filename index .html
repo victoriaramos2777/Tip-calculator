@@ -45,30 +45,32 @@
         <button type="button" class="form__btns__button"value="0.15">15%</button>
        
         <button type="button" class="form__btns__button"value="0.25">25%</button>
-        <button type="button" class="form__btns__button"value="0.50">50%</button>
+        <button type="button" 
+        class="form__btns__button"value="0.
+        50">50%</button>
         <input class="form__btns__button" type="text" placeholder="Custom" id="custom-tip">
       </div>
 
 
       <div class="form__box">
         <label class="form__box__label">Number of People</label>
-        <div class="form__box__inputs">
-          <i class="fa-solid fa-user"></i>
+        <div class="form__box__label__inputs">
+          <img src="./assets/image/icon-person.svg" alt="icon de person"class="form__box__label__inputs__icon-dollar">
           <input type="number" id="total-people">
         </div>
       </div>
-      <button type="submit">calculate</button>
+      <button type="submit" class="form__btns__button">calculate</button>
     </form>
 
     <section id="result" class="result">
       <div class="result__tip" >
-        <h3>Tip Amount <span>/ person</span></h3>
-        <p id="result-tip">$0.00</p>
+        <h3 class="result__tip__amount">Tip Amount <span>/ person</span></h3>
+        <p id="result-tip" class="result__tip__amount__pa">$0.00</p>
       </div>
 
       <div class="result__total">
-        <h3>Total <span>/ person</span></h3>
-        <p id="result-total">$0.00</p>
+        <h3 class="result__total__person">Total <span>/ person</span></h3>
+        <p id="result-total" class="result__total__person__pa2">$0.00</p>
       </div>
 
       <button type="button" class="result__btn" id="reset-btn">Reset</button>

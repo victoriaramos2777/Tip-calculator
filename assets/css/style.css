@@ -39,8 +39,9 @@ body {
   align-items: center;
 }
 .header__logo {
-  width: 17%;
-  height: 30%;
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
 }
 
 #main {
@@ -60,7 +61,7 @@ body {
 .form__box__label {
   color: var(--Dark-grayish-cyan);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .form__box__label__inputs {
   padding: 0.3rem 1rem;
@@ -74,6 +75,7 @@ body {
 }
 .form__box__label__inputs__icon-dollar {
   width: 5%;
+  object-fit: contain;
 }
 .form__box__label__inputs input {
   color: var(--Very-dark-cyan);
@@ -99,17 +101,18 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 1rem 1rem 0;
 }
 .form__btns__button {
   border: none;
   background-color: var(--Very-dark-cyan);
   color: var(--White);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 0.4rem;
-  width: 40%;
+  width: 45%;
   margin-top: 3%;
-  padding: 1%;
+  padding: 2%;
   outline: none;
   transition: 0.3s;
 }
@@ -121,6 +124,73 @@ body {
 }
 .form__btns input {
   background-color: var(--Very-light-grayish-cyan);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--Very-dark-cyan);
+}
+
+.result {
+  background-color: var(--Very-dark-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 25vh;
+  width: 70%;
+  margin: 7%;
+}
+.result__tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result__tip__amount {
+  display: flex;
+  flex-direction: column;
+  color: var(--White);
+  font-weight: 700;
+}
+.result__tip__amount__pa {
+  color: var(--Strong-cyan);
+  font-weight: 700;
+}
+.result__tip__amount span {
+  color: var(--Light-grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.result__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result__total__person {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  color: var(--White);
+  font-weight: 700;
+}
+.result__total__person__pa2 {
+  color: var(--Strong-cyan);
+  font-weight: 700;
+}
+.result__total__person span {
+  color: var(--Light-grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.result__btn {
+  padding: 0.6em;
+  margin-top: 7%;
+  border-radius: 5px;
+  background-color: var(--Strong-cyan);
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--Very-dark-cyan);
 }
 
 /*# sourceMappingURL=style.css.map */
