@@ -70,10 +70,10 @@ form.addEventListener('submit',(e) => {
    
    //llamar funciones que actualizan el DOM
   
-  updateTip(tipFinal,tipResult);
+  updateTip(tipFinal.toFixed(2), tipResult);
   
   
-  updateTotal(totalF,totalResult);
+  updateTotal(totalF.toFixed(2),totalResult);
   
 
 });
