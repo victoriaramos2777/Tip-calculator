@@ -1,0 +1,247 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+//color del placeholder
+::placeholder{
+ 
+  color: var( --Dark-grayish-cyan);
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
+:root {
+  //color primario
+  --Strong-cyan: hsl(172, 67%, 45%);
+  //colores neutrales
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+//tamaño para celular
+body {
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--Light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+}
+#main {
+  background-color: var(--White);
+  border-radius: 1rem;
+}
+
+
+.header {
+  width: 100%;
+  height:20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    width: 60%;
+    height: 50%;
+    object-fit: contain;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  
+  
+  &__box {
+    height: 20%;
+    
+    &__label {
+  
+      color: var( --Dark-grayish-cyan);
+      font-weight: 700;
+      font-size:1rem;
+      &__inputs {
+        padding: 0.3rem 1rem;
+        height: 2.2rem;
+        border-radius:0.9rem;
+        background-color: var(--Very-light-grayish-cyan);
+        display: flex;
+        justify-content: space-between;
+
+        &__icon-dollar {
+          width: 5%;
+          object-fit: contain
+          
+          ;
+
+        }
+
+        input {
+          color: var(--Very-dark-cyan);
+          border: none;
+          background: none;
+          outline: none;
+          text-align: right;
+          font-size: 1.5rem;
+          font-weight: 700;
+          z-index: 1;
+          width: 50%;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+    }
+  }
+}
+
+.form__btns{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem 1rem 0;
+  &__button{
+    border: none;
+    background-color:var( --Very-dark-cyan);
+    color:var(--White);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    width: 45%;
+    margin-top: 3%;
+    padding: 2%;
+    outline:none;
+    transition: 0.30s;
+  }
+  &__button:nth-child(odd){
+    margin-right: 6%;
+  }
+  &__button.active {
+    background-color: var(--Strong-cyan);
+  }
+
+  input {
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: center;
+    font-size: 1rem;
+    color: var(--Very-dark-cyan);
+  }
+
+}
+//estilos para la seccion result
+
+.result{
+  background-color: var(--Very-dark-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 25vh;
+  width: 70%;
+  margin:7%;
+&__tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  &__amount{
+    display: flex;
+    flex-direction: column;
+    color: var(--White);
+    font-weight: 700;
+    &__pa{
+      color: var(--Strong-cyan);
+      font-weight: 700;
+        font-size: 1.3rem;
+        
+    }
+    span{
+      color: var(--Light-grayish-cyan);
+      font-size: 0.8rem;
+
+    }
+  }
+}
+}
+
+.result__total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__person{
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    color: var(--White);
+    font-weight: 700;
+    &__pa2{
+      color: var(--Strong-cyan);
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    span{
+      color: var(--Light-grayish-cyan);
+      font-size: 0.8rem;
+
+    }
+  }
+}
+
+.result__btn{
+  padding: 0.6em;
+  margin-top: 7%;
+  border-radius: 5px;
+  background-color: var(--Strong-cyan);
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 1rem;
+ 
+  color: var( --Very-dark-cyan);
+}
+
+//estilo para Desktop: 1440px
+
+@media screen and (min-width:1440px) {
+  body {
+    height: 100vh;
+    width: 100%;
+    max-width: 800px;
+  
+  }
+
+  #main{
+    display: flex;
+
+  }
+
+  .result{
+    width: 60%;
+    height:40vh ;
+    margin:0;
+    margin-top: 3%;
+    margin-right: 2%;
+  }
+  .result__btn{
+    margin-top: 30%;
+  }
+  
+}
