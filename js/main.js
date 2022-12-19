@@ -100,4 +100,3 @@ totalResult.innerText = '$0.00';
 
 
 
-
