@@ -154,6 +154,7 @@ body {
 .result__tip__amount__pa {
   color: var(--Strong-cyan);
   font-weight: 700;
+  font-size: 1.3rem;
 }
 .result__tip__amount span {
   color: var(--Light-grayish-cyan);
@@ -175,6 +176,7 @@ body {
 .result__total__person__pa2 {
   color: var(--Strong-cyan);
   font-weight: 700;
+  font-size: 1.3rem;
 }
 .result__total__person span {
   color: var(--Light-grayish-cyan);

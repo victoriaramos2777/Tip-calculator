@@ -2,7 +2,10 @@ import tipCalculater from './modules/tipCalculator.js';
 import totalFinal from './modules/totalFinal.js';
 import updateTip from './modules/updateTip.js';
 import updateTotal from './modules/updateTip.js';
+
+
 //constantes ed los elementos html
+
 const main = document.getElementById('main');
 const form = document.getElementById('main-form');
 const tipResult = document.getElementById('result-tip');
@@ -47,9 +50,10 @@ form.addEventListener('submit',(e) => {
 
     //crear objeto constante con los valores de la forma
     const formulario = {
-        subtotalF:subtotal.value,
-        porcenTipF:porcenTip.value,
-        personasF:personas.value,
+        subtotalF: subtotal.value,
+        porcenTipF: porcenTip.value,
+        personasF: personas.value,
+        
     }
 
     console.log(formulario);
@@ -85,9 +89,12 @@ resetBtn.addEventListener('click',(e) => {
  for(let i =0; i < btns.length; i++){
     btns[i].classList.remove('active');
 }
-tipResult.innerText = '&0.00';
-totalResult.innerText = '&0.00';
+tipResult.innerText = '$0.00';
+totalResult.innerText = '$0.00';
 });
+
+
+
 
 
 
