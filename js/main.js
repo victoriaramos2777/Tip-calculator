@@ -60,9 +60,12 @@ form.addEventListener('submit',(e) => {
     //evitar la accion por defecto
     e.preventDefault();
 
-    if(check)
-    porcenTip.value = porcenTip.va/100;
+    if (validteClick(checkBtn)){
+  //Si le dieron click a custom, entonces dividamos su valor entre 10
 
+    if(checKCustom){
+    porcenTip.value = porcenTip.value/100;
+    }
     //crear objeto constante con los valores de la forma
     const formulario = {
         subtotalF: subtotal.value,
@@ -71,22 +74,26 @@ form.addEventListener('submit',(e) => {
         
     }
 
-    console.log(formulario);
-
     const {subtotalF,porcenTipF,personasF} = formulario;
 
-    const tipFinal = tipCalculater
-   ( subtotalF,porcenTipF,personasF);
+    if (validateAll(subTotalF, personasF)) {
+        updateDOM(subTotalF, porcenTipF, personasF);
+        subtotal.parentElement.classList.add('valid');
+        personas.parentElement.classList.add('valid');
     
-   console.log(tipFinal);
-   
+        removeBorder(subtotal, 'valid');
+        removeBorder(personas, 'valid');
+      }
 
-   const totalF = totalFinal
-   (subtotalF,personasF,tipFinal);
+    }
+});
 
-   console.log(totalF);
 
-   
+     // Funcion para actualizar el DOM
+function updateDOM(subTotalF, porcenTipF, personasF) {
+    const tipFinal = tipCalculator(subTotalF, porcenTipF, personasF);
+  
+    const totalF = totalFinal(subTotalF, personasF, tipFinal);
    //llamar funciones que actualizan el DOM
   
   updateTip(tipFinal.toFixed(2), tipResult);
@@ -94,8 +101,22 @@ form.addEventListener('submit',(e) => {
   
   updateTotal(totalF.toFixed(2),totalResult);
   
+}
 
-});
+// Funcion para quitar los mensajes en un periodo de tiempo
+function removeText(element) {
+    setTimeout(() => {
+      element.innerText = '';
+    }, 4000);
+  }
+
+  function removeBorder(element, classOfElement) {
+    setTimeout(() => {
+      element.parentElement.classList.remove(classOfElement);
+    }, 4000);
+  }
+  
+
 // btn para reiniciar la tip calculator
 resetBtn.addEventListener('click',(e) => {
  subtotal.value ='';
