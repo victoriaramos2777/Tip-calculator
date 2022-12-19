@@ -122,9 +122,20 @@ resetBtn.addEventListener('click',(e) => {
  subtotal.value ='';
  customTip.value= '';
  personas.value = '';
+
+  // Quitar validos
+  subtotal.parentElement.classList.remove('valid');
+  personas.parentElement.classList.remove('valid');
+
+  // Quitar invalidos
+  personas.parentElement.classList.remove('invalid');
+  subtotal.parentElement.classList.remove('invalid');
+  
  for(let i =0; i < btns.length; i++){
     btns[i].classList.remove('active');
 }
+
+
 tipResult.innerText = '$0.00';
 totalResult.innerText = '$0.00';
 });
