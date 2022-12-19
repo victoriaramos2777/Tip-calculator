@@ -139,11 +139,23 @@ body {
   }
 
   input {
+
     background-color: var(--Very-light-grayish-cyan);
     text-align: center;
     font-size: 1rem;
     color: var(--Very-dark-cyan);
   }
+   /* Chrome, Safari, Edge, Opera */
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+
+   /* Firefox */
+   input[type="number"] {
+     -moz-appearance: textfield;
+   }
 
 }
 //estilos para la seccion result
@@ -237,12 +249,18 @@ body {
   .result{
     width: 60%;
     height:40vh ;
-    margin: 2em;
-    
+    margin: 1.6em;
+
 
   }
   .result__btn{
     margin-top: 30%;
+  
+  }
+
+ #calculator{
+    width: 100%;
+    padding: 0.5em;
   }
   
 }

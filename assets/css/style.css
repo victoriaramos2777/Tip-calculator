@@ -102,6 +102,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 1rem 1rem 0;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 .form__btns__button {
   border: none;
@@ -127,6 +129,14 @@ body {
   text-align: center;
   font-size: 1rem;
   color: var(--Very-dark-cyan);
+}
+.form__btns input::-webkit-outer-spin-button,
+.form__btns input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__btns input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .result {
@@ -207,10 +217,14 @@ body {
   .result {
     width: 60%;
     height: 40vh;
-    margin: 2em;
+    margin: 1.6em;
   }
   .result__btn {
     margin-top: 30%;
+  }
+  #calculator {
+    width: 100%;
+    padding: 0.5em;
   }
 }
 
