@@ -29,34 +29,33 @@
   <main id="main">
     <form id="main-form" class="form">
       <div class="form__box">
-        <label class="form__box__label">Bill</label>
+        <label class="form__box__label">Bill <span id="not-valid1" ></span></label>
         <div class="form__box__label__inputs">
           <img src="./assets/image/icon-dollar.svg" alt="icon de dollar" class="form__box__label__inputs__icon-dollar">
-          <input type="number" id="total-bill">
+          <input type="number" id="total-bill" requerid placeholder="0">
         </div>
       </div>
       <div class="form__box">
-        <label for="" class="form__box__label">Selector de %</label>
+        <label class="form__box__label">Selector de % <span id="not-valid3" class="no-valid"></span></label>
       </div>
 
       <div class="form__btns" id="form-btns">
         <button type="button" class="form__btns__button"value="0.05">5%</button>
         <button type="button" class="form__btns__button"value="0.10">10%</button>
         <button type="button" class="form__btns__button"value="0.15">15%</button>
-       
-        <button type="button" class="form__btns__button"value="0.25">25%</button>
+       <button type="button" class="form__btns__button"value="0.25">25%</button>
         <button type="button" 
         class="form__btns__button"value="0.
         50">50%</button>
-        <input class="form__btns__button" type="text" placeholder="Custom" id="custom-tip">
+        <input class="form__btns__button" type="number" placeholder="Custom" id="custom-tip">
       </div>
 
 
       <div class="form__box">
-        <label class="form__box__label">Number of People</label>
+        <label class="form__box__label">Number of People <span  id="not-valid2" class="no-valid"></span> </label>
         <div class="form__box__label__inputs">
           <img src="./assets/image/icon-person.svg" alt="icon de person"class="form__box__label__inputs__icon-dollar">
-          <input type="number" id="total-people">
+          <input type="number" id="total-people" requerid placeholder="0">
         </div>
       </div>
       <button type="submit" id="calculator" class="form__btns__button">calculate</button>

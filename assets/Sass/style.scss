@@ -139,11 +139,23 @@ body {
   }
 
   input {
+
     background-color: var(--Very-light-grayish-cyan);
     text-align: center;
     font-size: 1rem;
     color: var(--Very-dark-cyan);
   }
+   /* Chrome, Safari, Edge, Opera */
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+
+   /* Firefox */
+   input[type="number"] {
+     -moz-appearance: textfield;
+   }
 
 }
 //estilos para la seccion result
@@ -159,6 +171,7 @@ body {
   width: 70%;
   margin:7%;
 &__tip{
+  width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,10 +180,13 @@ body {
     flex-direction: column;
     color: var(--White);
     font-weight: 700;
+    font-size: 1.2rem;
+    width: 50%;
     &__pa{
       color: var(--Strong-cyan);
       font-weight: 700;
         font-size: 1.3rem;
+       
         
     }
     span{
@@ -231,17 +247,38 @@ body {
   #main{
     display: flex;
 
+
   }
 
   .result{
     width: 60%;
     height:40vh ;
-    margin:0;
-    margin-top: 3%;
-    margin-right: 2%;
+    margin: 1.6em;
+
+
   }
   .result__btn{
     margin-top: 30%;
-  }
   
+  }
+
+ #calculator{
+    width: 100%;
+    padding: 0.5em;
+  }  
+}
+
+// clases de validacion
+.valid {
+  border: 1px solid var( --Strong-cyan);
+}
+
+.invalid{
+  border: 1px solid red;
+}
+
+.no-valid{
+
+  color: rgb(255, 38, 0);
+  font-size: .8rem;
 }
