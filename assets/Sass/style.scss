@@ -171,6 +171,7 @@ body {
   width: 70%;
   margin:7%;
 &__tip{
+  width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,10 +180,13 @@ body {
     flex-direction: column;
     color: var(--White);
     font-weight: 700;
+    font-size: 1.2rem;
+    width: 50%;
     &__pa{
       color: var(--Strong-cyan);
       font-weight: 700;
         font-size: 1.3rem;
+       
         
     }
     span{
@@ -271,4 +275,10 @@ body {
 
 .invalid{
   border: 1px solid red;
+}
+
+.no-valid{
+
+  color: rgb(255, 38, 0);
+  font-size: .8rem;
 }

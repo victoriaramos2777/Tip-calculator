@@ -151,6 +151,7 @@ body {
   margin: 7%;
 }
 .result__tip {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,6 +161,8 @@ body {
   flex-direction: column;
   color: var(--White);
   font-weight: 700;
+  font-size: 1.2rem;
+  width: 50%;
 }
 .result__tip__amount__pa {
   color: var(--Strong-cyan);
@@ -233,6 +236,11 @@ body {
 
 .invalid {
   border: 1px solid red;
+}
+
+.no-valid {
+  color: rgb(255, 38, 0);
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

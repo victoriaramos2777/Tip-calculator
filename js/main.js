@@ -173,7 +173,7 @@ function validateAll(subTotalF, personasF) {
 
 function validateClick(checkBtn) {
   let check = true;
-
+  
   if (!checkBtn) {
     check = false;
 
